@@ -374,6 +374,26 @@ display: flex;
     margin-top: 50px;
 }
 
+.employ-list-item {
+    position: relative;
+}
+
+.employ-list-title {
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    bottom: 0;
+  
+    background: rgba(47, 48, 58, 0.8);
+
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--white-color);
+    padding: 27px;
+}
 
 /* ---------------  TEAM --------------*/
  .team {
