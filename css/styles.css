@@ -66,7 +66,7 @@ address {
     --white-color: #FFFFFF;
     --black-color: #000000;
     --distance-elements: 30px;
-    --anim: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .body {
@@ -271,21 +271,6 @@ list-style: none;
     top: 77px; 
 }
  
-
-
-
-/*.backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    
-    visibility: hidden;
-        opacity: 0;
-        
-        .site-nav-item::after .link.current {
-                visibility: visible;
-        
-            }*/
 
 /* margins between elements old variant */
 /*.site-nav .site-nav-item:not(:last-child) {
@@ -782,29 +767,36 @@ list-style: none;
     background-color: rgba(0, 0, 0, 0.2);
 
     transition: opacity var(--anim), visibility var(--anim);
-    /*,
-        transform var(--anim)*/
+    
 }
 
 .backdrop.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-  /*  transform: rotate(45);*/
 }
+
+
 .modal {
     position: absolute;
     width: 528px;
     height: 581px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
    
     background-color: var(--white-color);
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
+
+        transition: transform 450ms, opasity 450ms;
 }
 
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+}
 .modal-btn {
     position: absolute;
     top:0;
