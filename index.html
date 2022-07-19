@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-  <body class="body">
+  <body class="body" id="page">
     <header class="header">
       <div class="container page-header">
         <nav class="nav-header">
@@ -53,7 +53,7 @@
       <!--Герой-->
         <section class="hero">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="button hero-btn pointer">Заказать услугу</button>
+          <button class="button hero-btn pointer" type="button" data-modal-open>Заказать услугу</button>
         </section>
     
 
@@ -420,5 +420,12 @@
       </div>
     </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <butoon class="modal-btn" type="button" data-modal-close>Xxx</butoon>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
